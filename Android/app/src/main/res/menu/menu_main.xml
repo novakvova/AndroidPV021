@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/m_home"
+        android:title="Головна"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/m_calculator"
+        android:title="Калькулятор"
+        app:showAsAction="never" />
+</menu>

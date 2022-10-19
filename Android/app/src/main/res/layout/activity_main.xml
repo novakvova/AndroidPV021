@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
 
+
     <ImageView
         android:id="@+id/ivGirl"
         android:layout_width="wrap_content"
@@ -16,4 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="203dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="112dp"
+        android:contentDescription="Hello my friend"
+        android:onClick="myClickImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivGirl"
+        android:src="@drawable/ic_launcher_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>
