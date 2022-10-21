@@ -21,6 +21,10 @@ namespace Infrastructure.Data
         public ShopEFContext(DbContextOptions<ShopEFContext> options) : base(options)  { }
         
         public DbSet<CategoryEntity> Categories { get; set; }
+        /// <summary>
+        /// List News
+        /// </summary>
+        public DbSet<PostEntity> Posts { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
