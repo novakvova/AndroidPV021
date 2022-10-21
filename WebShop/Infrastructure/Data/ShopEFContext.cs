@@ -25,6 +25,7 @@ namespace Infrastructure.Data
         /// List News
         /// </summary>
         public DbSet<PostEntity> Posts { get; set; }
+        public DbSet<UserPostSelect> UserPostSelects { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -43,6 +44,11 @@ namespace Infrastructure.Data
                     .WithMany(r => r.UserRoles)
                     .HasForeignKey(r => r.UserId)
                     .IsRequired();
+            });
+
+            builder.Entity<UserPostSelect>(userPostSelect =>
+            {
+                userPostSelect.HasKey(ur => new { ur.UserId, ur.PostId });
             });
             //builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }

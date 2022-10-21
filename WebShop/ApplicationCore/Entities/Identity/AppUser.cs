@@ -17,5 +17,7 @@ namespace ApplicationCore.Entities.Identity
         [StringLength(maximumLength: 150)]
         public string Photo { get; set; }
         public virtual ICollection<AppUserRole> UserRoles { get; set; }
+        public virtual ICollection<UserPostSelect> UserPostSelects { get; set; }
+        public virtual ICollection<PostEntity> Posts { get; set; }
     }
 }
