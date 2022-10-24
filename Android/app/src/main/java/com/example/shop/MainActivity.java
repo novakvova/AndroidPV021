@@ -20,7 +20,7 @@ public class MainActivity extends BaseActivity {
         ImageView imageView = (ImageView) findViewById(R.id.ivGirl);
 
         Glide.with(this)
-                .load("http://10.0.2.2:5224/images/1.jpg")
+                .load("https://pv021.novakvova.com/images/girl.jpg")
                 .apply((new RequestOptions().override(600)))
                 .into(imageView);
     }
