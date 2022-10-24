@@ -2,6 +2,7 @@
 using ApplicationCore.Entities.Identity;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using WebShop.Constants;
 
 namespace WebShop.Services
@@ -15,6 +16,8 @@ namespace WebShop.Services
             {
                 var context = scope.ServiceProvider
                     .GetRequiredService<ShopEFContext>();
+                
+                context.Database.Migrate();
 
                 var userManager = scope.ServiceProvider
                     .GetRequiredService<UserManager<AppUser>>();
@@ -82,6 +85,20 @@ namespace WebShop.Services
                         context.UserPostSelects.Add(postSelect);
                         context.SaveChanges();
                     }
+                }
+
+                if (!context.Categories.Any())
+                {
+                    var category = new CategoryEntity
+                    {
+                        Name = "Комп'ютери та ноутбуки",
+                        DateCreated= DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc),
+                        Image = "laptop.jpeg",
+                        Priority=1,
+                        Description="Ноутбуки і ПК для кожного"
+                    };
+                    context.Categories.Add(category);
+                    context.SaveChanges();
                 }
             }
         }
