@@ -6,26 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
-    <ImageView
-        android:id="@+id/ivGirl"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvCategories"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:layout_editor_absoluteX="0dp" />
 
-    <Button
-        android:id="@+id/imageButton"
-        android:layout_width="219dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="112dp"
-        android:onClick="myClickImage"
-        android:text="Привіт"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivGirl" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

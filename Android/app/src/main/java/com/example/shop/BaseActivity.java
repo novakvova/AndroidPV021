@@ -7,6 +7,8 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.shop.common.ChangeImageActivity;
+
 public class BaseActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -33,6 +35,16 @@ public class BaseActivity extends AppCompatActivity {
             case R.id.m_calculator:
                 try {
                     intent = new Intent(BaseActivity.this, CalculatorActivity.class);
+                    startActivity(intent);
+                    finish();
+                } catch (Exception ex) {
+                    System.out.println("Problem " + ex.getMessage());
+                }
+                return true;
+
+            case R.id.m_changeimage:
+                try {
+                    intent = new Intent(BaseActivity.this, ChangeImageActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception ex) {

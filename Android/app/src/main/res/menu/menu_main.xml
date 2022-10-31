@@ -8,4 +8,9 @@
         android:id="@+id/m_calculator"
         android:title="Калькулятор"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/m_changeimage"
+        android:title="Вибір фото"
+        app:showAsAction="never" />
 </menu>
