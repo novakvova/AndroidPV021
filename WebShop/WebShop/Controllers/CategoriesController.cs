@@ -1,7 +1,9 @@
-﻿using AutoMapper;
+﻿using ApplicationCore.Entities;
+using AutoMapper;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebShop.Helpers;
 using WebShop.Models;
 
 namespace WebShop.Controllers
@@ -27,6 +29,24 @@ namespace WebShop.Controllers
                 .Select(x =>_mapper.Map<CategoryItemModel>(x))
                 .ToList();
             return Ok(model);
+        }
+
+        [HttpPost]
+        [Route("create")]
+        public async Task<IActionResult> Create(CategoryCreateModel model)
+        {
+            try
+            {
+                var category = _mapper.Map<CategoryEntity>(model);
+                category.Image = ImageWorker.SaveImage(model.Image);
+                await _context.Categories.AddAsync(category);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
+            return Ok();
         }
     }
 }

@@ -10,7 +10,7 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/m_changeimage"
-        android:title="Вибір фото"
+        android:id="@+id/m_categorycreate"
+        android:title="Додати категорію"
         app:showAsAction="never" />
 </menu>

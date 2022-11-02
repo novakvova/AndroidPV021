@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.shop.common.CategoryCreateActivity;
 import com.example.shop.common.ChangeImageActivity;
 
 public class BaseActivity extends AppCompatActivity {
@@ -42,9 +43,9 @@ public class BaseActivity extends AppCompatActivity {
                 }
                 return true;
 
-            case R.id.m_changeimage:
+            case R.id.m_categorycreate:
                 try {
-                    intent = new Intent(BaseActivity.this, ChangeImageActivity.class);
+                    intent = new Intent(BaseActivity.this, CategoryCreateActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (Exception ex) {
