@@ -1,6 +1,7 @@
 ﻿using ApplicationCore.Entities;
 using AutoMapper;
 using Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebShop.Helpers;
@@ -22,6 +23,7 @@ namespace WebShop.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         [Route("list")]
         public async Task<IActionResult> Index()
         {
