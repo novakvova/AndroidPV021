@@ -23,7 +23,7 @@ namespace WebShop.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        
         [Route("list")]
         public async Task<IActionResult> Index()
         {
@@ -34,6 +34,7 @@ namespace WebShop.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [Route("create")]
         public async Task<IActionResult> Create(CategoryCreateModel model)
         {

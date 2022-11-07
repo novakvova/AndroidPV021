@@ -9,8 +9,25 @@
         android:title="Калькулятор"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/m_categorycreate"
-        android:title="Додати категорію"
-        app:showAsAction="never" />
+    <group android:id="@+id/group_anonimus"
+        android:visible="true">
+        <item
+            android:id="@+id/m_login"
+            android:title="Вхід"
+            app:showAsAction="never" />
+    </group>
+
+    <group
+        android:id="@+id/group_auth"
+        android:visible="false">
+        <item
+            android:id="@+id/m_logout"
+            android:title="Вихід"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/m_categorycreate"
+            android:title="Додати категорію"
+            app:showAsAction="never" />
+    </group>
 </menu>
