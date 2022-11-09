@@ -31,6 +31,7 @@ namespace WebShop.Helpers
             try
             {
                 string base64 = imageBase64;
+
                 if (base64.Contains(","))
                     base64 = base64.Split(',')[1];
 

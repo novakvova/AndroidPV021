@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebShop</name>
+    </assembly>
+    <members>
+        <member name="P:WebShop.Models.LoginViewModel.Email">
+            <summary>
+            
+            </summary>
+            <example>admin@gmail.com</example>
+        </member>
+        <member name="P:WebShop.Models.LoginViewModel.Password">
+            <summary>
+            
+            </summary>
+            <example>Qwerty1-+</example>
+        </member>
+    </members>
+</doc>
