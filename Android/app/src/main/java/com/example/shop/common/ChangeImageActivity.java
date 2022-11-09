@@ -44,6 +44,10 @@ public class ChangeImageActivity extends BaseActivity {
             Uri selecteImage = data.getData();
             cropView.of(selecteImage).asSquare().initialize(ChangeImageActivity.this);
         }
+        else
+        {
+            this.finish();
+        }
     }
 
     public void handleCropImage(View view) {

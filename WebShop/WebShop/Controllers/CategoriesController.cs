@@ -40,6 +40,7 @@ namespace WebShop.Controllers
         {
             try
             {
+                string userName = User.Identity.Name;
                 var category = _mapper.Map<CategoryEntity>(model);
                 category.Image = ImageWorker.SaveImage(model.Image);
                 await _context.Categories.AddAsync(category);
